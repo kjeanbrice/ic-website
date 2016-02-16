@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Project 1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/css/bootstrap.min.css">
+        <link rel="stylesheet" href="styles/gen-styles/layout.css">
+        <script src = scripts/html-helper.js></script>
+    </head>
+    <body >
+        <div class = "row">
+            <div id = "ibm-masthead-toprow" class = "col-md-12">IBM</div>
+        </div>
+        <div class = "row">
+            <div id = "ibm-masthead-bottomrow" class = "col-md-12">
+                <img id = "ibm-watermark" alt = "Developer Works" src = "images/ibm-watermark.png">
+            </div>
+        </div>
+        <div class = "row">
+            <div id = "ibm-banner-bg" class = "col-md-12">
+                <h1 class = "ibm-banner-text">developerWorks registration</h1>
+            </div>
+        </div>
+
+        <div class = "container">
+            <div class ="row">
+                <div id = "opening-text" class = " more-padding col-md-8">    
+                </div>
+
+                <div id = "ibm-why-register" class = "col-md-4">    
+                </div>
+            </div>
+            <div class ="row">
+                <div class = "col-md-8">
+                    <p>
+                        <strong>Basic registration information</strong>
+                    </p>
+                </div>  
+            </div>
+
+            <form>
+                <div class ="row">
+                    <div class = "more-padding col-md-4">
+                        <label for = "txt-firstname">
+                            <span class = "row-form-label">
+                                First name:
+                                <span class = "asterisk-color-red">*</span><br>
+                            </span>
+                        </label>
+                        <input type="text" id="txt-firstname" size="36">
+                    </div>
+                    <div class = "more-padding col-md-4">
+                        <label for = "txt-lastname">
+                            <span class = "row-form-label">
+                                Last Name:
+                                <span class = "asterisk-color-red">*</span><br>
+                            </span>
+                        </label>
+                        <input type="text" id="txt-lastname" size="36">
+                    </div> 
+                </div>
+                <div class ="row">
+                    <div class = "more-padding col-md-4">
+                        <label for = "txt-email">
+                            <span class = "row-form-label">
+                                Email address:
+                                <span class = "asterisk-color-red">*</span><br>
+                                <span class ="lbl-tip">(This will also be your IBM ID for signing in)</span><br>           
+                            </span>
+                        </label>
+                        <input type="text" id="txt-email" size="36">
+                    </div>
+                    <div class = "more-padding col-md-4">
+                        <br>
+                        <br>
+                        <span id = "err-emailaddress" class ="lbl-error">A generic error message is displayed here.</span>
+                    </div> 
+                </div>
+                <div class ="row">
+                    <div class = "more-padding col-md-4">
+                        <label for = "txt-password">
+                            <span class = "row-form-label">
+                                Password:
+                                <span class = "asterisk-color-red">*</span><br>
+                                <span class ="lbl-tip">(Must be at least 8 characters)</span><br>           
+                            </span>
+                        </label>
+                        <input type="text" id="txt-password" size="36">
+                    </div>
+                    <div class = "more-padding col-md-4">
+                        <br>
+                        <br>
+                        <span id = "err-password" class ="lbl-error">A generic error message is displayed here.</span>
+                    </div>
+                </div>
+                <div class ="row">
+                    <div class = "more-padding col-md-4">
+                        <label for = "txt-verify-password">
+                            <span class = "row-form-label">
+                                Verify Password:
+                                <span class = "asterisk-color-red">*</span><br>           
+                            </span>
+                        </label>
+                        <input type="text" id="txt-verify-password" size="36">
+                    </div>
+                    <div class = "more-padding col-md-4">
+                        <br>
+                        <span id = "err-verify-password" class ="lbl-error">A generic error message is displayed here.</span>
+                    </div>
+                </div>
+
+                <div class ="row">
+                    <div class = "more-padding col-md-4">
+                        <label for = "txt-display-name">
+                            <span class = "row-form-label">
+                                Display name:
+                                <span class = "asterisk-color-red">*</span><br>
+                                <span class ="lbl-tip">(Must be between 3 - 31 characters.)</span><br>           
+                            </span>
+                        </label>
+                        <input type="text" id="txt-display-name" size="36">
+                    </div>
+                    <div class = "more-padding col-md-4">
+                        <br>
+                        <br>
+                        <span id = "err-display-name" class ="lbl-error">A generic error message is displayed here.</span>
+                    </div>
+                </div>
+
+                <div class ="row">
+                    <div class = "more-padding col-md-4">
+                        <label for = "select-country">
+                            <span class = "row-form-label">
+                                Country/region of residence::
+                                <span class = "asterisk-color-red">*</span><br>
+                            </span>
+                        </label>
+                        <select id="select-country" name = "select-country/region" >
+                            <option value = "" selected = "selected">Select One</option>
+                            <option value ="AU">Australia</option>
+                            <option value ="BA">Bahamas</option>
+                            <option value ="CN">China</option>
+                            <option value ="DK">Denmark</option>
+                            <option value ="US">United States</option>        
+                        </select>
+                    </div>
+                    <div class = "more-padding col-md-4">
+                    </div> 
+                </div>
+
+                <div class ="row">
+                      <div class = "more-padding col-md-4">
+                        <label for = "txt-city">
+                            <span class = "row-form-label">
+                                City:<br>
+                            </span>
+                        </label>
+                        <input type="text" id="txt-city" size="36">
+                    </div>
+                    <div class = "more-padding col-md-4">
+                        <label for = "select-language">
+                            <span class = "row-form-label">
+                                Language:
+                                <span class = "asterisk-color-red">*</span><br>
+                            </span>
+                        </label>
+                        <select id="select-language" name = "select-country/region" >
+                            <option value = "" selected = "selected">Select One</option>
+                            <option value ="EN">English</option>
+                            <option value ="FR">French</option>
+                            <option value ="JA">Japanese</option>
+                            <option value ="LA">Latin</option> 
+                            <option value ="SN">Spanish</option>                              
+                        </select>      
+                    </div>
+                    <div class = "more-padding col-md-4">
+                        <br>
+                        <span id = "err-city" class ="lbl-error">A generic error message is displayed here.</span>
+                    </div>
+                </div>
+                
+                <div class ="row">
+                      <div class ="sub-text-padding col-md-8">
+                          <span class = "sub-text">Please select a security question that only you can answer or create your own. Then enter the answer to the question. 
+                              Occasionally, you may be asked to answer this question to confirm your identity.</span>
+                      </div>
+                 </div>
+                
+                <div class ="row">
+                      <div class = "button-padding col-md-2">
+                        <input id="btn-submit" name="btn-submit" class="btn-submit-d" value="Register" type="submit">
+                    </div>
+                    <div class = "button-padding col-md-2">
+                        <input id="btn-cancel" name="btn-cancel" class="btn-submit-d" value="Cancel" type="button">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!--<script src = scripts/ibm-builder.js></script>-->
+    </body>
+</html>
