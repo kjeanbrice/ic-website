@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles/css/bootstrap.min.css">
         <link rel="stylesheet" href="styles/gen-styles/layout.css">
-        <script src = scripts/html-helper.js></script>
+        <script src = "scripts/html-helper.js"></script>
     </head>
-    <body >
+    <body>
         <div class = "row">
             <div id = "ibm-masthead-toprow" class = "col-md-12">IBM</div>
         </div>
@@ -17,10 +17,14 @@
                 <img id = "ibm-watermark" alt = "Developer Works" src = "images/ibm-watermark.png">
             </div>
         </div>
-        <div class = "row">
-            <div id = "ibm-banner-bg" class = "col-md-12">
+        <div id = "ibm-banner-bg" class = "row">
+             <div class = "col-md-2">
+                
+            </div>
+            <div class = "col-md-4">
                 <h1 class = "ibm-banner-text">developerWorks registration</h1>
             </div>
+         
         </div>
 
         <div class = "container">
@@ -150,7 +154,7 @@
                 </div>
 
                 <div class ="row">
-                      <div class = "more-padding col-md-4">
+                    <div class = "more-padding col-md-4">
                         <label for = "txt-city">
                             <span class = "row-form-label">
                                 City:<br>
@@ -165,7 +169,7 @@
                                 <span class = "asterisk-color-red">*</span><br>
                             </span>
                         </label>
-                        <select id="select-language" name = "select-country/region" >
+                        <select id="select-language" name = "select-country-region" >
                             <option value = "" selected = "selected">Select One</option>
                             <option value ="EN">English</option>
                             <option value ="FR">French</option>
@@ -183,20 +187,96 @@
                 <div class ="row">
                       <div class ="sub-text-padding col-md-8">
                           <span class = "sub-text">Please select a security question that only you can answer or create your own. Then enter the answer to the question. 
-                              Occasionally, you may be asked to answer this question to confirm your identity.</span>
+                              Occasionally, you may be asked to answer this question to confirm your identity.
+                          </span>
                       </div>
+                </div>
+                 
+                 <div class = "row">
+                        <div class = "col-md-4">
+                            <label for = "txt-verify-password">
+                                <span class = "row-form-label">
+                                Security Question:
+                                <span class = "asterisk-color-red">*</span><br>           
+                            	</span>
+                            </label>
+                            
+                            <select id="select-security-question" name = "select-security-question" >
+                                <option value ="" selected = "selected">Select One</option>
+                                <option value="name">What is your mother's maiden name?</option>
+                                <option value="pet">What is the name of your first pet?</option>
+                                <option value="school">What was the name of your first school?</option>
+				<option value="job">In what city or town was your first job?</option>
+				<option value="country">In what country were you born?</option>                             
+                            </select>     
+                    	</div>
                  </div>
                 
-                <div class ="row">
-                      <div class = "button-padding col-md-2">
-                        <input id="btn-submit" name="btn-submit" class="btn-submit-d" value="Register" type="submit">
+                <div class = "row">
+                    <div class = "more-padding col-md-4">
+                        <label for = "txt-security-answer">
+                            <span class = "row-form-label">
+                            Answer to Security Question
+                            </span>
+                            <span class = "asterisk-color-red">*</span>
+                        </label>
+                        <input type = "text" id = "txt-security-answer">
                     </div>
-                    <div class = "button-padding col-md-2">
-                        <input id="btn-cancel" name="btn-cancel" class="btn-submit-d" value="Cancel" type="button">
+                </div>
+                
+                <div class ="row">
+                    <div class = "ibm-privacy-border col-md-6">
+                        <div> 
+                                <strong>Privacy Preferences</strong>
+                                <br>
+                                <br>
+                                <p>
+                                    <span class = "sub-text">Please keep me informed of products, 
+                                    services and offerings from IBM companies worldwide.
+                                    </span>
+                                </p>
+                        </div>
+                        
+                        <input id="chbox_email" value="chbox_email" name="chbox_email" type="checkbox"/>
+                        <label for="chbox_email" class ="sub-text" >by email.</label>
+                        <br>
+                        <input id ="chbox_telephone" value ="chbox_telephone" name ="chbox_email" type="checkbox"/>
+                        <label for = "chbox_telephone" class ="sub-text" >by telephone or postal mail.</label>
+                        
+                        <br>
+                        <br>
+                        <p><span class = "sub-text">I accept  IBM's Privacy statement.</span></p>
+                        <p><span class = "sub-text">All fields are required to complete this transaction.</span></p>
+                    </div>
+                </div>
+                <div class ="row">
+                    <div class ="more-padding col-md-6">
+                        <span class ="sub-text">By selecting the Register link, I agree to the developerWorks terms of use.</span>
+                    </div>
+                </div>
+                <div class ="row">
+                    
+                    <div>
+                      <div class = "button-padding col-md-2">
+                          <input id="btn-submit" name="btn-submit" class="btn-submit-d" value="Register" type="submit">
+                      </div>
+                      <div class = "button-padding col-md-2">
+                          <input id="btn-cancel" name="btn-cancel" class="btn-submit-d" value="Cancel" type="button">
+                      </div>
                     </div>
                 </div>
             </form>
+            <div class ="row">
+               
+            </div>
         </div>
-        <!--<script src = scripts/ibm-builder.js></script>-->
+         <footer>
+                    <div class = "row">
+                    	<div class = "ibm-footer col-md-12"></div>
+                    </div>
+                </footer> 
+        <script src = "scripts/ibm-builder.js"></script>
+       
     </body>
+    
 </html>
