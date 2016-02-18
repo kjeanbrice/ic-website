@@ -201,12 +201,12 @@ input[type="text"]:focus{
 }
 
 .ibm-footer{
-	background: -webkit-gradient(linear, left top, left bottom, from(#DDDDDD), to(#FFFFFF));
-	background: -moz-linear-gradient(top,  #DDDDDD,  #FFFFFF);
-	background: -o-linear-gradient(top, #DDDDDD, #FFFFFF) transparent;
+    background: -webkit-gradient(linear, left top, left bottom, from(#DDDDDD), to(#FFFFFF));
+    background: -moz-linear-gradient(top,  #DDDDDD,  #FFFFFF);
+    background: -o-linear-gradient(top, #DDDDDD, #FFFFFF) transparent;
     margin-top: 10px;
     padding-top:60px;
-	padding-bottom:60px;
+    padding-bottom:60px;
 }
 
 
