@@ -1,11 +1,7 @@
 /*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : Jan 19, 2016, 10:39:47 PM
-    Author     : Karl
+    Layout.css
+    Created on : Feb 15, 2016, 10:39:47 PM
+    Authors     : Karl Jean-Brice, Wenliang Cheng, and Jennifer Zou.
 */
 
 *{
@@ -49,8 +45,8 @@ option{
 
 #ibm-masthead-bottomrow{
     background: -webkit-gradient(linear, left top, left bottom, from(#595C64), to(#1B1B1C));
-	background: -moz-linear-gradient(top,  #595C64,  #1B1B1C);
-	background: -o-linear-gradient(top, #595C64, #1B1B1C) transparent;
+    background: -moz-linear-gradient(top,  #595C64,  #1B1B1C);
+    background: -o-linear-gradient(top, #595C64, #1B1B1C) transparent;
     padding-bottom: 10px;
     padding-top: 10px;
 }
@@ -59,7 +55,6 @@ option{
     font-size: 30px;
     color:#000000;
     font-weight: 700;
-    padding-left: 3%;
     margin-top:25px;
     margin-bottom: 60px;
 }
