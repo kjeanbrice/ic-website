@@ -9,16 +9,6 @@
 
 function countPasswordFields(){
         
-        /*
-        var doc = document.getElementsByTagName("input");
-        var count = 0;
-        for(var i = 0; i<doc.length; i++)
-        {
-           if(doc[i].getAttribute("type") === "password")
-           {
-                count = count + 1;
-           }
-        } 
-        alert("Password form fields: " + count);*/
+    
 }
 
