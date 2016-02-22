@@ -43,7 +43,7 @@ option{
     
 }
 
-#ibm-masthead-bottomrow{
+#ibm-masthead-middlerow{
     background: -webkit-gradient(linear, left top, left bottom, from(#595C64), to(#1B1B1C));
     background: -moz-linear-gradient(top,  #595C64,  #1B1B1C);
     background: -o-linear-gradient(top, #595C64, #1B1B1C) transparent;
@@ -108,7 +108,7 @@ option{
     
 }
 
-select, input[type="text"]{
+select, input[type="text"], input[type="password"]{
     height: 25px;
     width: 275px;
     text-shadow: 0 1px 0 #FFF;
@@ -160,6 +160,57 @@ input[type="text"]:focus{
 }
 
 input[type="text"]:focus{
+    height: 25px;
+    width: 275px;
+    text-shadow: 0 1px 0 #FFF;
+    outline: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(#BCBCBE), to(#FFF));
+    background: -moz-linear-gradient(top, #BCBCBE, #FFF);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #717171;
+    -webkit-box-shadow: 1px 1px 0 #EFEFEF;
+    -moz-box-shadow: 1px 1px 0 #efefef;
+    box-shadow: 1px 1px 0 #EFEFEF;
+    font-size: 13px;
+}
+
+input[type="password"]:hover{
+    height: 25px;
+    width: 275px;
+    text-shadow: 0 1px 0 #FFF;
+    outline: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(#BCBCBE), to(#FFF));
+    /*background: -moz-linear-gradient(top, #BCBCBE, #FFF)*/;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #717171;
+    -webkit-box-shadow: 1px 1px 0 #EFEFEF;
+    -moz-box-shadow: 1px 1px 0 #efefef;
+    box-shadow: 1px 1px 0 #EFEFEF;
+    font-size: 13px;
+}
+
+input[type="password"]:focus{
+    height: 25px;
+    width: 275px;
+    text-shadow: 0 1px 0 #FFF;
+    outline: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(#BCBCBE), to(#FFF));
+    background: -moz-linear-gradient(top, #BCBCBE, #FFF);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #717171;
+    -webkit-box-shadow: 1px 1px 0 #EFEFEF;
+    -moz-box-shadow: 1px 1px 0 #efefef;
+    box-shadow: 1px 1px 0 #EFEFEF;
+    font-size: 13px;
+}
+
+input[type="password"]:focus{
     height: 25px;
     width: 275px;
     text-shadow: 0 1px 0 #FFF;
