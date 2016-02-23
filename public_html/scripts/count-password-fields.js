@@ -9,13 +9,13 @@
 
 function countPasswordFields(){
 
-    var inputLength = document.getElementById('ibm-pcon').getElementsByTagName('input').length;
-	var inputNum= document.getElementById('ibm-pcon').getElementsByTagName('input');
+    var inputLength = document.getElementsByTagName('input').length;
+	var input= document.getElementsByTagName('input');
+	
 	var counts = 0;
-    
-	for (var i=0, length = inputNum.length; i<length; i++) 
+	for (var i=0, length1 = input.length; i<length1; i++) 
 	{
-		if (inputNum[i].type == 'password') 
+		if (input[i].type == 'password') 
 		{
 			counts++;
 		}
