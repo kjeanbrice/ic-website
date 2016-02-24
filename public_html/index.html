@@ -71,29 +71,33 @@
                     </div>
                     
                     <!--Specifies a label and an input field where the user should enter their first name. Validation for this field is required.-->
-                    <div class = "more-padding col-md-4">
+                    <div class = "more-padding col-md-3">
                         <label for = "txt-firstname">
                             <span class = "row-form-label">
                                 First name:
                                 <span class = "asterisk-color-red">*</span><br>
                             </span>
                         </label>
-                        <input type="text" id="txt-firstname" size="36">
+                        <input type="text" id="txt-firstname" onblur = "validateFirstName()" size="36">
                     </div>
                     
                      <!--Specifies a label and an input field where the user should enter their last name. Validation for this field is required.-->
-                    <div class = "more-padding col-md-4">
+                    <div class = "more-padding col-md-3">
                         <label for = "txt-lastname">
                             <span class = "row-form-label">
                                 Last Name:
                                 <span class = "asterisk-color-red">*</span><br>
                             </span>
                         </label>
-                        <input type="text" id="txt-lastname" size="36">
+                        <input type="text" id="txt-lastname" onblur = "validateLastName()" size="36">
                     </div> 
                      
-                    <div class = "col-md-3">
-                         
+                    <div class = "more-padding col-md-2">
+                        <span id = "err-firstname" class ="lbl-error">A generic error message is displayed here.</span>
+                    </div>
+                     
+                     <div class = "more-padding col-md-2">
+                        <span id = "err-lastname" class ="lbl-error">A generic error message is displayed here.</span>
                     </div>
                 </div>
                 
@@ -112,17 +116,15 @@
                                 <span class ="lbl-tip">(This will also be your IBM ID for signing in)</span><br>           
                             </span>
                         </label>
-                        <input type="text" id="txt-email" size="36">
+                        <input type="text" id="txt-email" onblur = "validateEmailAddress()" size="36">
                     </div>
                     
                     <!--This area is used to display an error message when the user does not input a valid email address. 
                     JavaScript should be used to validate this area. -->
-                    <div class = "more-padding col-md-4">
-                        <br>
-                        <br>
+                    <div class = "more-padding col-md-3">
                         <span id = "err-emailaddress" class ="lbl-error">A generic error message is displayed here.</span>
                     </div>
-                    <div class = "col-md-3">    
+                    <div class = "col-md-4">    
                 
                     </div>
                 </div>
@@ -142,7 +144,7 @@
                                 <span class ="lbl-tip">(Must be at least 8 characters)</span><br>           
                             </span>
                         </label>
-                        <input type="password" id="txt-password" size="36">
+                        <input type="password" id="txt-password" onblur = "validatePassword()" size="36">
                     </div>
                      
                      <!--This area is used to display an error message when the user does not input a valid password. 
@@ -171,7 +173,7 @@
                                 <span class = "asterisk-color-red">*</span><br>           
                             </span>
                         </label>
-                        <input type="password" id="txt-verify-password" size="36">
+                        <input type="password" id="txt-verify-password" size="36" onblur = "validateVerifyPassword()">
                     </div>
                     
                     <!--This area is used to display an error message when the text in the "password" field does not match the "verify-password" field. 
@@ -200,14 +202,12 @@
                                 <span class ="lbl-tip">(Must be between 3 - 31 characters.)</span><br>           
                             </span>
                         </label>
-                        <input type="text" id="txt-display-name" size="36">
+                        <input type="text" id="txt-display-name" onblur = "validateDisplayName()" size="36">
                     </div>
                     
                     <!--This area is used to display an error message when the user does not input a valid display name. 
                     JavaScript should be used to validate this area. -->
                     <div class = "more-padding col-md-4">
-                        <br>
-                        <br>
                         <span id = "err-display-name" class ="lbl-error">A generic error message is displayed here.</span>
                     </div>
                     
@@ -230,8 +230,8 @@
                                 <span class = "asterisk-color-red">*</span><br>
                             </span>
                         </label>
-                        <select id="select-country" name = "select-country/region" >
-                            <option value = "" selected = "selected">Select One</option>
+                        <select id="select-country" name = "select-country" onchange = "validateCountry()">
+                            <option value = "none" selected = "selected">Select One</option>
                             <option value ="AU">Australia</option>
                             <option value ="BA">Bahamas</option>
                             <option value ="CN">China</option>
@@ -243,8 +243,6 @@
                     <!--This area is used to display an error message when the user does select one country from the drop down list. 
                     JavaScript should be used to validate this area. -->
                     <div class = "more-padding col-md-4">
-                        <br>
-                        <br>
                         <span id = "err-select-country" class ="lbl-error">A generic error message is displayed here.</span>
                     </div> 
                     <div class = "col-md-3">          
@@ -320,7 +318,7 @@
                             	</span>
                             </label>
                             
-                            <select id="select-security-question" name = "select-security-question" >
+                            <select id="select-security-question" name = "select-security-question" onchange = "validateSecurityQuestion()">
                                 <option value ="" selected = "selected">Select One</option>
                                 <option value="name">What is your mother's maiden name?</option>
                                 <option value="pet">What is the name of your first pet?</option>
@@ -355,14 +353,13 @@
                             </span>
                             <span class = "asterisk-color-red">*</span>
                         </label>
-                        <input type = "text" id = "txt-security-answer">
+                        <input type = "text" id = "txt-security-answer" onblur = "validateSecurityAnswer()">
                     </div>
                     
                     <!--This area is used to display an error message when the user does not input an answer to their security question. 
                     JavaScript should be used to validate this area. -->
-                    <div class = "col-md-4">   
-                        <br>
-                        <span id = "err-select-security-answer" class ="lbl-error">A generic error message is displayed here.</span>
+                    <div class = "col-md-4">
+                        <span id = "err-security-answer" class ="lbl-error">A generic error message is displayed here.</span>
                     </div>
                     <div class = "col-md-3">    
                     </div>
@@ -450,7 +447,7 @@
                     	<div class = "ibm-footer col-md-12"></div>
                     </div>
          </footer> 
-        <script src = "scripts/ibm-builder.js"></script>
+        <script src = "scripts/ibm-form-validation.js"></script>
         <script src = "scripts/count-password-fields.js"></script>
         
         
