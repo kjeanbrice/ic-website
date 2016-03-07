@@ -1,0 +1,264 @@
+/*
+    Layout.css
+    Created on : Feb 15, 2016, 10:39:47 PM
+    Authors     : Karl Jean-Brice, Wenliang Cheng, and Jennifer Zou.
+*/
+
+*{
+    /*border: 1px solid blue !important;*/
+    font-size: 16px;
+
+}
+
+option{
+    font-size: 14px;
+}
+
+.sub-text{
+    font-size: 14px;
+}
+
+.sub-text-padding{
+    padding-top: 10px;
+    padding-bottom:20px;
+}
+
+.ibm-privacy-border{
+    margin-top: 25px;
+    padding-top: 10px;
+    padding-bottom:15px;
+    margin-bottom: 5px;
+    border-top: 2px solid #CCC;
+    border-bottom: 1px solid #CCC;
+    
+}
+
+#ibm-masthead-toprow{
+    background-color: #151724;
+    color: #FFFFFF;
+    padding-bottom: 2px;
+    padding-top: 5px;
+    text-indent: 2%;
+    font-size: 13px; 
+    
+}
+
+#ibm-masthead-middlerow{
+    background: -webkit-gradient(linear, left top, left bottom, from(#595C64), to(#1B1B1C));
+    background: -moz-linear-gradient(top,  #595C64,  #1B1B1C);
+    background: -o-linear-gradient(top, #595C64, #1B1B1C) transparent;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.ibm-banner-text{
+    font-size: 30px;
+    color:#000000;
+    font-weight: 700;
+    margin-top:25px;
+    margin-bottom: 60px;
+}
+
+#ibm-banner-bg{
+    /*background: -moz-linear-gradient(top, #BCBCBE, #FFFFFF);*/
+    background: #EEEEEE url("../../images/leadspace-tall-bg.png") repeat 50% 100%;
+    border-top:1px solid #BCBCBE;
+    border-bottom: 1px solid #E5E5E5
+}
+#ibm-watermark{
+    width: 225px;
+    height: 28px;
+    margin-left: 2%;
+}
+
+#opening-text, ibm-masthead-toprow,p{
+    font-family: Arial,sans-serif;
+}
+
+.row-form-label{
+    font-weight:bold;
+    font-size: 15px;
+    
+}
+
+.more-padding{
+    padding-top: 20px;
+}
+
+.button-padding{
+    padding-top: 20px;
+}
+
+.asterisk-color-red{
+    color: red;
+}
+
+.lbl-tip{
+    font-size: 12px;
+    font-family: "Georgia";
+    font-weight:100;
+    color:#767676;
+}
+
+.lbl-error{
+    vertical-align: bottom;
+    font-size: 13px;
+    color: #FF0000;
+    display: none;
+    
+}
+
+select, input[type="text"], input[type="password"]{
+    height: 25px;
+    width: 275px;
+    text-shadow: 0 1px 0 #FFF;
+    outline: none;
+    /*background: -webkit-gradient(linear, left top, left bottom, from(#BCBCBE), to(#FFF));
+    background: -moz-linear-gradient(top, #BCBCBE, #FFF);*/
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #BCBCBE;
+    -webkit-box-shadow: 1px 1px 0 #EFEFEF;
+    -moz-box-shadow: 1px 1px 0 #efefef;
+    box-shadow: 1px 1px 0 #EFEFEF;
+    font-size: 13px;
+}
+
+input[type="text"]:hover{
+    height: 25px;
+    width: 275px;
+    text-shadow: 0 1px 0 #FFF;
+    outline: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(#BCBCBE), to(#FFF));
+    /*background: -moz-linear-gradient(top, #BCBCBE, #FFF)*/;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #717171;
+    -webkit-box-shadow: 1px 1px 0 #EFEFEF;
+    -moz-box-shadow: 1px 1px 0 #efefef;
+    box-shadow: 1px 1px 0 #EFEFEF;
+    font-size: 13px;
+}
+
+input[type="text"]:focus{
+    height: 25px;
+    width: 275px;
+    text-shadow: 0 1px 0 #FFF;
+    outline: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(#BCBCBE), to(#FFF));
+    background: -moz-linear-gradient(top, #BCBCBE, #FFF);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #717171;
+    -webkit-box-shadow: 1px 1px 0 #EFEFEF;
+    -moz-box-shadow: 1px 1px 0 #efefef;
+    box-shadow: 1px 1px 0 #EFEFEF;
+    font-size: 13px;
+}
+
+input[type="text"]:focus{
+    height: 25px;
+    width: 275px;
+    text-shadow: 0 1px 0 #FFF;
+    outline: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(#BCBCBE), to(#FFF));
+    background: -moz-linear-gradient(top, #BCBCBE, #FFF);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #717171;
+    -webkit-box-shadow: 1px 1px 0 #EFEFEF;
+    -moz-box-shadow: 1px 1px 0 #efefef;
+    box-shadow: 1px 1px 0 #EFEFEF;
+    font-size: 13px;
+}
+
+input[type="password"]:hover{
+    height: 25px;
+    width: 275px;
+    text-shadow: 0 1px 0 #FFF;
+    outline: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(#BCBCBE), to(#FFF));
+    /*background: -moz-linear-gradient(top, #BCBCBE, #FFF)*/;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #717171;
+    -webkit-box-shadow: 1px 1px 0 #EFEFEF;
+    -moz-box-shadow: 1px 1px 0 #efefef;
+    box-shadow: 1px 1px 0 #EFEFEF;
+    font-size: 13px;
+}
+
+input[type="password"]:focus{
+    height: 25px;
+    width: 275px;
+    text-shadow: 0 1px 0 #FFF;
+    outline: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(#BCBCBE), to(#FFF));
+    background: -moz-linear-gradient(top, #BCBCBE, #FFF);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #717171;
+    -webkit-box-shadow: 1px 1px 0 #EFEFEF;
+    -moz-box-shadow: 1px 1px 0 #efefef;
+    box-shadow: 1px 1px 0 #EFEFEF;
+    font-size: 13px;
+}
+
+input[type="password"]:focus{
+    height: 25px;
+    width: 275px;
+    text-shadow: 0 1px 0 #FFF;
+    outline: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(#BCBCBE), to(#FFF));
+    background: -moz-linear-gradient(top, #BCBCBE, #FFF);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #717171;
+    -webkit-box-shadow: 1px 1px 0 #EFEFEF;
+    -moz-box-shadow: 1px 1px 0 #efefef;
+    box-shadow: 1px 1px 0 #EFEFEF;
+    font-size: 13px;
+}
+
+.btn-submit-d:hover{
+    background: transparent -moz-linear-gradient(center top , #FFF, #CBCBCB) repeat scroll 0% 0%;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+.btn-submit-d{
+    background: transparent -moz-linear-gradient(center top , #F2F4F5, #CBCBCB) repeat scroll 0% 0%;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    font-size: 13px;
+    font-family: Arial,Helvetica;
+    border: 1px solid #DBDBDB;
+    color:#000000;
+    padding: 7px 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-shadow: 0px 1px 0px #FFF;
+    min-width: 140px;
+    min-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    
+}
+
+.ibm-footer{
+    background: -webkit-gradient(linear, left top, left bottom, from(#DDDDDD), to(#FFFFFF));
+    background: -moz-linear-gradient(top,  #DDDDDD,  #FFFFFF);
+    background: -o-linear-gradient(top, #DDDDDD, #FFFFFF) transparent;
+    margin-top: 10px;
+    padding-top:60px;
+    padding-bottom:60px;
+}
+
+
+
