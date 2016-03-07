@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSE 336 - Assignment #2a</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/css/bootstrap.min.css">
+        <link rel="stylesheet" href="styles/gen-styles/layout.css">
+        <script src = "scripts/html-helper.js"></script>
+    </head>
+    <body>
+        <div class = "container-fluid">
+            
+            <!--Top section of IBM's masthead-->
+            <div class = "row">
+                    <div id = "ibm-masthead-toprow" class = "col-md-12">IBM</div>
+            </div>
+            
+            <!--Middle section of IBM's masthead-->
+            <div class = "row">
+                <div id = "ibm-masthead-middlerow" class = "col-md-12">
+                    <img id = "ibm-watermark" alt = "Developer Works" src = "images/ibm-watermark.png">
+                </div>
+            </div>
+            
+            <!--Bottom section of IBM's masthead-->
+            <div id = "ibm-banner-bg" class = "row">
+                 <div class = "col-md-1"></div>
+                <div class = "col-md-11">
+                    <h1 class = "ibm-banner-text">developerWorks registration</h1>
+                </div>
+            </div>
+            
+            <!--This row displays the opening text-->
+            <div class ="row">
+                <div id = "ibm-why-register" class = "col-md-1">    
+                
+                </div>   
+                <div id = "opening-text" class = " more-padding col-md-8">    
+                    <p>
+                        Thank you for registering with IBM developerWorks.To simplify things,you can use the IBM ID and password that you designate below across IBM.<br><br>
+                        Asterisks <span class = "asterisk-color-red">*</span> indicate fields required to complete this transaction.
+                    </p>
+                </div>
+                <div class = "col-md-3">    
+              
+                </div> 
+            </div>
+            
+            <!--This row displays the text "Basic registration information" in a bold format.-->
+            <div class ="row">
+                <div class = "col-md-1">    
+                
+                </div> 
+                <div class = "col-md-8">
+                    <p>
+                        <strong>Basic registration information</strong>
+                    </p>
+                </div>  
+                <div class = "col-md-3">    
+                
+                </div>
+            </div>
+
+            <!--This form container is used to collect essential information from the user such as their first/last name, email address, password, etc. -->
+            <form>   
+                <!--This row is a container for the first/last name input fields-->
+                <div class ="row">
+                    <div class = "col-md-1">    
+                
+                    </div>
+                    
+                    <!--Specifies a label and an input field where the user should enter their first name. Validation for this field is required.-->
+                    <div class = "more-padding col-md-3">
+                        <label for = "txt-firstname">
+                            <span class = "row-form-label">
+                                First name:
+                                <span class = "asterisk-color-red">*</span><br>
+                            </span>
+                        </label>
+                        <input type="text" id="txt-firstname" onblur = "validateFirstName()" size="36">
+                    </div>
+                    
+                     <!--Specifies a label and an input field where the user should enter their last name. Validation for this field is required.-->
+                    <div class = "more-padding col-md-3">
+                        <label for = "txt-lastname">
+                            <span class = "row-form-label">
+                                Last Name:
+                                <span class = "asterisk-color-red">*</span><br>
+                            </span>
+                        </label>
+                        <input type="text" id="txt-lastname" onblur = "validateLastName()" size="36">
+                    </div> 
+                     
+                    <div class = "more-padding col-md-2">
+                        <span id = "err-firstname" class ="lbl-error">A generic error message is displayed here.</span>
+                    </div>
+                     
+                     <div class = "more-padding col-md-2">
+                        <span id = "err-lastname" class ="lbl-error">A generic error message is displayed here.</span>
+                    </div>
+                </div>
+                
+                <!--This row is a container for the "email address" input field-->
+                <div class ="row">
+                    <div class = "col-md-1">    
+                
+                    </div>
+                    
+                    <!--Specifies a label and an input field where the user should enter their email address. Validation for this field is required.-->
+                    <div class = "more-padding col-md-4">
+                        <label for = "txt-email">
+                            <span class = "row-form-label">
+                                Email address:
+                                <span class = "asterisk-color-red">*</span><br>
+                                <span class ="lbl-tip">(This will also be your IBM ID for signing in)</span><br>           
+                            </span>
+                        </label>
+                        <input type="text" id="txt-email" onblur = "validateEmailAddress()" size="36">
+                    </div>
+                    
+                    <!--This area is used to display an error message when the user does not input a valid email address. 
+                    JavaScript should be used to validate this area. -->
+                    <div class = "more-padding col-md-3">
+                        <span id = "err-emailaddress" class ="lbl-error">A generic error message is displayed here.</span>
+                    </div>
+                    <div class = "col-md-4">    
+                
+                    </div>
+                </div>
+                
+                <!--This row is a container for the "password" input field-->
+                <div class ="row">
+                    <div class = "col-md-1">    
+                
+                    </div>
+                    
+                     <!--Specifies a label and an input field where the user should enter their password. Validation for this field is required.-->
+                    <div class = "more-padding col-md-4">
+                        <label for = "txt-password">
+                            <span class = "row-form-label">
+                                Password:
+                                <span class = "asterisk-color-red">*</span><br>
+                                <span class ="lbl-tip">(Must be at least 8 characters)</span><br>           
+                            </span>
+                        </label>
+                        <input type="password" id="txt-password" onblur = "validatePassword()" size="36">
+                    </div>
+                     
+                     <!--This area is used to display an error message when the user does not input a valid password. 
+                    JavaScript should be used to validate this area. -->
+                    <div class = "more-padding col-md-4">
+                        <br>
+                        <br>
+                        <span id = "err-password" class ="lbl-error">A generic error message is displayed here.</span>
+                    </div>
+                    <div class = "col-md-3">    
+                
+                    </div>
+                </div>
+                 
+                <!--This row is a container for the "verify-password" input field--> 
+                <div class ="row">
+                    <div class = "col-md-1">    
+                
+                    </div>
+                    
+                     <!--Specifies a label and an input field where the user is asked to verify their password. Validation for this field is required.-->
+                    <div class = "more-padding col-md-4">
+                        <label for = "txt-verify-password">
+                            <span class = "row-form-label">
+                                Verify Password:
+                                <span class = "asterisk-color-red">*</span><br>           
+                            </span>
+                        </label>
+                        <input type="password" id="txt-verify-password" size="36" onblur = "validateVerifyPassword()">
+                    </div>
+                    
+                    <!--This area is used to display an error message when the text in the "password" field does not match the "verify-password" field. 
+                    JavaScript should be used to validate this area. -->
+                    <div class = "more-padding col-md-4">
+                        <br>
+                        <span id = "err-verify-password" class ="lbl-error">A generic error message is displayed here.</span>
+                    </div>
+                    <div class = "col-md-3">    
+                
+                    </div>
+                </div>
+
+                <!--This row is a container for the "display-name" input field area--> 
+                <div class ="row">
+                    <div class = "col-md-1">    
+                
+                    </div>
+                    
+                    <!--Specifies a label and an input field where the user is asked to input a "display name". Validation for this field is required.-->
+                    <div class = "more-padding col-md-4">
+                        <label for = "txt-display-name">
+                            <span class = "row-form-label">
+                                Display name:
+                                <span class = "asterisk-color-red">*</span><br>
+                                <span class ="lbl-tip">(Must be between 3 - 31 characters.)</span><br>           
+                            </span>
+                        </label>
+                        <input type="text" id="txt-display-name" onblur = "validateDisplayName()" size="36">
+                    </div>
+                    
+                    <!--This area is used to display an error message when the user does not input a valid display name. 
+                    JavaScript should be used to validate this area. -->
+                    <div class = "more-padding col-md-4">
+                        <span id = "err-display-name" class ="lbl-error">A generic error message is displayed here.</span>
+                    </div>
+                    
+                    <div class = "col-md-3">    
+                
+                    </div>
+                </div>
+
+                 <!--This row is a container for the drop down list containing five countries selection field--> 
+                <div class ="row">
+                    <div class = "col-md-1">    
+                
+                    </div>
+                    
+                    <!--Specifies a label and a select field where the user is asked to select a country. Validation for this field is required.-->
+                    <div class = "more-padding col-md-4">
+                        <label for = "select-country">
+                            <span class = "row-form-label">
+                                Country/region of residence::
+                                <span class = "asterisk-color-red">*</span><br>
+                            </span>
+                        </label>
+                        <select id="select-country" name = "select-country" onchange = "validateCountry()">
+                            <option value = "none" selected = "selected">Select One</option>
+                            <option value ="AU">Australia</option>
+                            <option value ="BA">Bahamas</option>
+                            <option value ="CN">China</option>
+                            <option value ="DK">Denmark</option>
+                            <option value ="US">United States</option>        
+                        </select>
+                    </div>
+                    
+                    <!--This area is used to display an error message when the user does select one country from the drop down list. 
+                    JavaScript should be used to validate this area. -->
+                    <div class = "more-padding col-md-4">
+                        <span id = "err-select-country" class ="lbl-error">A generic error message is displayed here.</span>
+                    </div> 
+                    <div class = "col-md-3">          
+                    </div>
+                </div>
+
+                <!--This row is a container for the "city" input field and the language drop down list--> 
+                <div class ="row">
+                    <div class = "col-md-1">    
+                
+                    </div>
+                    
+                    <!--Specifies a label and an input field where the user is asked to input a city name. Validation for this field is not required.-->
+                    <div class = "more-padding col-md-4">
+                        <label for = "txt-city">
+                            <span class = "row-form-label">
+                                City:<br>
+                            </span>
+                        </label>
+                        <input type="text" id="txt-city" size="36">
+                    </div>
+                    
+                    <!--Specifies a label and an input field where the user is asked select a language from the drop down list. Validation for this field is required.-->
+                    <div class = "more-padding col-md-4">
+                        <label for = "select-language">
+                            <span class = "row-form-label">
+                                Language:
+                                <span class = "asterisk-color-red">*</span><br>
+                            </span>
+                        </label>
+                        <select id="select-language" name = "select-country-region" >
+                            <option value = "" selected = "selected">Select One</option>
+                            <option value ="EN">English</option>
+                            <option value ="FR">French</option>
+                            <option value ="JA">Japanese</option>
+                            <option value ="LA">Latin</option> 
+                            <option value ="SN">Spanish</option>                              
+                        </select>      
+                    </div>
+                    
+                    <!--This area is used to display an error message when the user does not select a language from the drop down list. 
+                    JavaScript should be used to validate this area. -->
+                    <div class = "more-padding col-md-3">
+                        <br>
+                        <span id = "err-select-language" class ="lbl-error">A generic error message is displayed here.</span>
+                    </div>
+                </div>
+                
+                <!--This row is a container to wrap text.-->
+                <div class ="row">
+                    <div class = "col-md-1">    
+                    </div>
+                      <div class ="sub-text-padding col-xs-8">
+                          <span class = "sub-text">Please select a security question that only you can answer or create your own. Then enter the answer to the question. 
+                              Occasionally, you may be asked to answer this question to confirm your identity.
+                          </span>
+                      </div>
+                    <div class = "col-md-3">    
+                    </div>
+                </div>
+                 
+                <!--This row is a container for the "select-security-question" drop down list.-->
+                <div class = "row">
+                        <div class = "col-md-1">    
+                        </div>
+                    
+                        <!--Specifies a label and an select field where the user is asked to select a security question from a drop down list. Validation for this field is required.-->
+                        <div class = "col-md-4">
+                            <label for = "select-security-question">
+                                <span class = "row-form-label">
+                                Security Question:
+                                <span class = "asterisk-color-red">*</span><br>           
+                            	</span>
+                            </label>
+                            
+                            <select id="select-security-question" name = "select-security-question" onchange = "validateSecurityQuestion()">
+                                <option value ="" selected = "selected">Select One</option>
+                                <option value="name">What is your mother's maiden name?</option>
+                                <option value="pet">What is the name of your first pet?</option>
+                                <option value="school">What was the name of your first school?</option>
+				<option value="job">In what city or town was your first job?</option>
+				<option value="country">In what country were you born?</option>                             
+                            </select>     
+                    	</div>
+                        
+                         <!--This area is used to display an error message when the user does not select a security question from the drop down list. 
+                        JavaScript should be used to validate this area. -->
+                        <div class = "col-md-4">    
+                            <br>
+                            <span id = "err-select-security-question" class ="lbl-error">A generic error message is displayed here.</span>
+                        </div>   
+                        <div class = "col-md-3">    
+                        </div>
+                 </div>
+                
+                 <!--This row is a container for the "security-answer" input field--> 
+                <div class = "row">
+                    <div class = "col-md-1">    
+                
+                    </div>
+                    
+                    <!--Specifies a label and an input field where the user is asked to enter an answer to their selected security question. 
+                    Validation for this field is required.-->
+                    <div class = "more-padding col-md-4">
+                        <label for = "txt-security-answer">
+                            <span class = "row-form-label">
+                            Answer to Security Question
+                            </span>
+                            <span class = "asterisk-color-red">*</span>
+                        </label>
+                        <input type = "text" id = "txt-security-answer" onblur = "validateSecurityAnswer()">
+                    </div>
+                    
+                    <!--This area is used to display an error message when the user does not input an answer to their security question. 
+                    JavaScript should be used to validate this area. -->
+                    <div class = "col-md-4">
+                        <span id = "err-security-answer" class ="lbl-error">A generic error message is displayed here.</span>
+                    </div>
+                    <div class = "col-md-3">    
+                    </div>
+                </div>
+                
+                 <!--This row is a container for the privacy preferences check box area.--> 
+                <div class ="row">
+                    <div class = "col-md-1">    
+                
+                    </div>
+                    <div class = "ibm-privacy-border col-md-6">
+                        <div> 
+                                <strong>Privacy Preferences</strong>
+                                <br>
+                                <br>
+                                <p>
+                                    <span class = "sub-text">Please keep me informed of products, 
+                                    services and offerings from IBM companies worldwide.
+                                    </span>
+                                </p>
+                        </div>
+                        
+                        <input id="chbox_email" value="chbox_email" name="chbox_email" type="checkbox"/>
+                        <label for="chbox_email" class ="sub-text" >by email.</label>
+                        <br>
+                        <input id ="chbox_telephone" value ="chbox_telephone" name ="chbox_email" type="checkbox"/>
+                        <label for = "chbox_telephone" class ="sub-text" >by telephone or postal mail.</label>
+                        
+                        <br>
+                        <br>
+                        <p><span class = "sub-text">I accept  IBM's Privacy statement.</span></p>
+                        <p><span class = "sub-text">All fields are required to complete this transaction.</span></p>
+                    </div>
+                    <div class = "col-md-5">    
+                
+                    </div>
+                </div>
+                
+                 <!--This row is used to display text relating to the "submit" and "cancel" buttons.--> 
+                <div class ="row">
+                    <div class = "col-md-1">    
+                
+                        </div>
+                    <div class ="more-padding col-md-6">
+                        <span class ="sub-text">By selecting the Register link, I agree to the developerWorks terms of use.</span>
+                    </div>
+                    <div class = "col-md-5">    
+                
+                    </div>
+                </div>
+                
+                <!--This row is a container for the "submit" and "cancel" buttons--> 
+                <div class ="row">
+                    <div class = "col-md-1">  
+                    </div>
+                    
+                    <!--Specifies a "submit" button used to submit the fields inputted by the user.-->
+                    <div class = "button-padding col-md-2">
+                        <input id="btn-submit" name="btn-submit" class="btn-submit-d" value="Register" type="submit">
+                    </div>
+                    
+                    <!--Specifies a "cancel" button used to disregard the fields inputted by the user.-->
+                    <div class = "button-padding col-md-2">
+                        <input id="btn-cancel" name="btn-cancel" class="btn-submit-d" value="Cancel" type="button">
+                    </div>
+                    <div class = "col-md-7">    
+                
+                    </div>
+                </div>
+            </form>
+            <div class ="row">
+                <div class = "col-md-1">
+                </div>
+                      
+                <div class = "button-padding col-md-2">
+                        <input id="btn-count" onclick = "countPasswordFields()" name="btn-cancel" class="btn-submit-d" value="Count Password Fields" type="button">
+                </div>
+                 <div class = "col-md-9">
+                </div>
+            </div>
+        </div>
+        <!--Displays the page footer. The grey area below the "submit" and "cancel" buttons-->
+         <footer>
+                    <div class = "row">
+                    	<div class = "ibm-footer col-md-12"></div>
+                    </div>
+         </footer> 
+        <script src = "scripts/ibm-form-validation.js"></script>
+        <script src = "scripts/count-password-fields.js"></script>
+        
+        
+       
+    </body>
+    
+</html>
